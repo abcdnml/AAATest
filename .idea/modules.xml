@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AAATest.iml" filepath="$PROJECT_DIR$/AAATest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libtest/libtest.iml" filepath="$PROJECT_DIR$/libtest/libtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialdesign/materialdesign.iml" filepath="$PROJECT_DIR$/materialdesign/materialdesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/net_lib/net_lib.iml" filepath="$PROJECT_DIR$/net_lib/net_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simplenetlib/simplenetlib.iml" filepath="$PROJECT_DIR$/simplenetlib/simplenetlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewgroup/viewgroup.iml" filepath="$PROJECT_DIR$/viewgroup/viewgroup.iml" />
+    </modules>
+  </component>
+</project>

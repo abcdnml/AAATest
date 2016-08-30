@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MaterialDesign</string>
+
+    <string name="test_statement">测试语句</string>
+    <string name="error_text">不管你怎样填 反正你填错了</string>
+    <string name="text_hint">随便写点什么吧</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
