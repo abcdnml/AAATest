@@ -25,6 +25,7 @@ public class Main2Activity extends AppCompatActivity {
                 sb=Snackbar.make(view, "Snack Bar Text", Snackbar.LENGTH_INDEFINITE).setAction("close",new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        startActivity(new Intent(Main2Activity.this,Main4Activity.class));
                         sb.dismiss();
                     }
                 }).setActionTextColor(Color.WHITE);
