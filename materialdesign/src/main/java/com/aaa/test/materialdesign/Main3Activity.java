@@ -1,5 +1,6 @@
 package com.aaa.test.materialdesign;
 
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,6 +8,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.WindowManager;
 
 import com.aaa.test.materialdesign.tab.FirstFragment;
@@ -37,9 +40,10 @@ public class Main3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main3);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tb_main3);
+        setSupportActionBar(toolbar);
         initView();
         initPage();
     }
@@ -103,5 +107,7 @@ public class Main3Activity extends AppCompatActivity {
         tab3.setIcon(getResources().getDrawable(R.drawable.selector_tab_icon));
         tab3.setText("tab3");
         mTabLayout.addTab(tab3);
+
+        //mTabLayout.setTabTextColors(Color.WHITE,Color.RED);
     }
 }

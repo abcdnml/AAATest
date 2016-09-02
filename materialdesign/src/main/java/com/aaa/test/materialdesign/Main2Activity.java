@@ -35,7 +35,20 @@ public class Main2Activity extends AppCompatActivity {
 
 
 
-        FloatingActionButton fab_anim = (FloatingActionButton) findViewById(R.id.fab_main2_anim);
+        FloatingActionButton fab_main2_appear = (FloatingActionButton) findViewById(R.id.fab_main2_appear);
+        fab_main2_appear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sb=Snackbar.make(view, "Snack Bar Text", Snackbar.LENGTH_SHORT).setAction("To third Activity",new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(Main2Activity.this,Main3Activity.class));
+                        sb.dismiss();
+                    }
+                }).setActionTextColor(Color.WHITE);
+                sb.show();
+            }
+        });
 
     }
 }
