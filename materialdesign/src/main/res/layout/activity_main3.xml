@@ -55,7 +55,7 @@
         android:id="@+id/fab_del_tab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom|start"
         android:layout_margin="20dp"
         android:src="@mipmap/del" />
 </android.support.design.widget.CoordinatorLayout>
