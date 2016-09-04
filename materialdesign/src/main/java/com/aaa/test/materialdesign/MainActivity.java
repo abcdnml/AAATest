@@ -21,6 +21,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+import com.aaa.test.materialdesign.tab.BehaviorTest2Activity;
+import com.aaa.test.materialdesign.tab.BehaviorTestActivity;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -153,9 +156,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
-
+             Intent intent=new Intent(this, BehaviorTestActivity.class);
+             startActivity(intent);
         } else if (id == R.id.nav_manage) {
-
+            Intent intent=new Intent(this, BehaviorTest2Activity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

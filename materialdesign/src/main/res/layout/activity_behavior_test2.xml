@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aaa.test.materialdesign.tab.BehaviorTest2Activity">
+
+        <TextView
+            android:id="@+id/tv_test2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_behavior=".behavior.Test2Behavior"
+            android:background="@mipmap/bg"/>
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsv_scoll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="200dp"
+                    style="@style/TextAppearance.AppCompat.Display3"
+                    android:text="A\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK\nL\nM\nN\nO\nP\nQ\nR\nS\nT\nU\nV\nW\nX\nY\nZ"
+                    android:background="@color/white"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/tab_customer_normal"
+            app:layout_behavior=".behavior.Test3Behavior"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="20dp"
+            />
+</android.support.design.widget.CoordinatorLayout>

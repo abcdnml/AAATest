@@ -10,8 +10,7 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-           >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,9 +19,9 @@
         </activity>
         <activity android:name=".Main2Activity" />
         <activity android:name=".Main3Activity" />
-        <activity android:name=".Main4Activity"
-
-            ></activity>
+        <activity android:name=".Main4Activity" />
+        <activity android:name=".tab.BehaviorTestActivity" />
+        <activity android:name=".tab.BehaviorTest2Activity"></activity>
     </application>
 
 </manifest>
