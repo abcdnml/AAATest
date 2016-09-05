@@ -28,6 +28,7 @@ public class Main4Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         fab_plus=(FloatingActionButton)findViewById(R.id.fab_add_tab) ;
+        fab_plus.setVisibility(View.VISIBLE);
         fab_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +38,7 @@ public class Main4Activity extends AppCompatActivity {
             }
         });
         fab_minus=(FloatingActionButton)findViewById(R.id.fab_del_tab);
+        fab_minus.setVisibility(View.VISIBLE);
         fab_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

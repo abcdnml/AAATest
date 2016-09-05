@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.aaa.test.materialdesign.tab.BehaviorTest2Activity;
 import com.aaa.test.materialdesign.tab.BehaviorTestActivity;
@@ -55,8 +56,7 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Go to next", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                                startActivity(intent);
+                               startActivity(new Intent(MainActivity.this,Main2Activity.class));
                             }
                         }) .setActionTextColor(Color.WHITE)
                         .setCallback(new Snackbar.Callback(){
@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity
                                         event ==DISMISS_EVENT_CONSECUTIVE) {
 
                                 }
+                                Toast.makeText(MainActivity.this,"clicked snack bar",Toast.LENGTH_SHORT).show();
                             }
                         })
                         .show();
@@ -152,9 +153,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            Intent intent = new Intent(MainActivity.this, Main3Activity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-
+            Intent intent = new Intent(MainActivity.this, Main4Activity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
              Intent intent=new Intent(this, BehaviorTestActivity.class);
              startActivity(intent);

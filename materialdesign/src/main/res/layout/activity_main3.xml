@@ -13,35 +13,41 @@
         >
 
         <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/ctl_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:minHeight="60dp"
             android:background="@mipmap/bg"
             android:layout_weight="1"
             app:titleTextColor="@color/white"
+            app:expandedTitleGravity="right|bottom"
+            app:layout_collapseMode="pin"
+            app:contentScrim="@color/blue"
             >
             <android.support.v7.widget.Toolbar
                 android:id="@+id/tb_main3"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-
                 />
         </android.support.design.widget.CollapsingToolbarLayout>
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
             app:tabIndicatorColor="@color/red"
             app:tabSelectedTextColor="@color/white"
-            android:layout_gravity="bottom"
+            app:layout_scrollFlags="scroll|enterAlways"
             app:tabTextColor="@color/gray" />
     </android.support.design.widget.AppBarLayout>
     <!--可滑动的布局内容-->
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="192dp"
+        />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_add_tab"
@@ -49,13 +55,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
+        android:visibility="gone"
         android:src="@mipmap/add" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_del_tab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_margin="20dp"
+        android:visibility="gone"
         android:src="@mipmap/del" />
 </android.support.design.widget.CoordinatorLayout>

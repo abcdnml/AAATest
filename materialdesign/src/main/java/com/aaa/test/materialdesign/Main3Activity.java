@@ -1,12 +1,14 @@
 package com.aaa.test.materialdesign;
 
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import com.aaa.test.materialdesign.tab.FirstFragment;
@@ -18,6 +20,7 @@ public class Main3Activity extends AppCompatActivity {
     Fragment[] fragments;
     private ViewPager vp_pager;
     TabLayout mTabLayout;
+    CollapsingToolbarLayout ctl_title;
 
     private FragmentManager fm = getSupportFragmentManager();
 
@@ -48,6 +51,9 @@ public class Main3Activity extends AppCompatActivity {
     private void initView() {
         vp_pager = (ViewPager) findViewById(R.id.vp_view);
         mTabLayout = (TabLayout) findViewById(R.id.tabs);
+        ctl_title=(CollapsingToolbarLayout)findViewById(R.id.ctl_title);
+        ctl_title.setExpandedTitleColor(Color.BLUE);
+        ctl_title.setCollapsedTitleTextColor(Color.WHITE);
     }
 
     private void initPage() {
