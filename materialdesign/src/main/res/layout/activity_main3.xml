@@ -62,9 +62,7 @@
         android:id="@+id/fab_del_tab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|start"
         android:layout_margin="20dp"
         android:visibility="gone"
         android:src="@mipmap/del" />
