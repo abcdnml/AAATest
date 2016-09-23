@@ -39,5 +39,5 @@ public interface HttpStack {
      * @param request 待执行的请求
      * @return
      */
-    public Response performRequest(Request<?> request);
+    Response performRequest(Request<?> request);
 }

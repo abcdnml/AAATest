@@ -1,1 +1,7 @@
 include ':net_lib', ':simplenetlib', ':viewgroup', ':materialdesign', ':libtest'
+
+//include ':TG_SDK_Lib'
+
+//project(':TG_SDK_Lib').projectDir = new File('../android/trunk/TG_SDK_Lib/')    //库工程的位置(相对位置)
+
+//include ':TG_SDK_Lib:Yj_SDK_demo'  //需要导入的库工程中的module

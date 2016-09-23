@@ -41,7 +41,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
@@ -116,7 +115,7 @@ public class HttpUrlConnStack implements HttpStack {
     }
 
     protected void setRequestParams(HttpURLConnection connection, Request<?> request)
-            throws ProtocolException, IOException {
+            throws IOException {
         HttpMethod method = request.getHttpMethod();
         connection.setRequestMethod(method.toString());
         // add params
@@ -125,8 +124,7 @@ public class HttpUrlConnStack implements HttpStack {
             // enable output
             connection.setDoOutput(true);
             // set content type
-            connection
-                    .addRequestProperty(Request.HEADER_CONTENT_TYPE, request.getBodyContentType());
+            connection.addRequestProperty(Request.HEADER_CONTENT_TYPE, request.getBodyContentType());
             // write params data to connection
             DataOutputStream dataOutputStream = new DataOutputStream(connection.getOutputStream());
             dataOutputStream.write(body);
@@ -148,7 +146,7 @@ public class HttpUrlConnStack implements HttpStack {
         // 构建response
         Response response = new Response(responseStatus);
         // 设置response数据
-        response.setEntity(entityFromURLConnwction(connection));
+        response.setEntity(entityFromURLConnection(connection));
         addHeadersToResponse(response, connection);
         return response;
     }
@@ -159,7 +157,7 @@ public class HttpUrlConnStack implements HttpStack {
      * @param connection
      * @return
      */
-    private HttpEntity entityFromURLConnwction(HttpURLConnection connection) {
+    private HttpEntity entityFromURLConnection(HttpURLConnection connection) {
         BasicHttpEntity entity = new BasicHttpEntity();
         InputStream inputStream = null;
         try {

@@ -44,7 +44,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      * 
      * @author mrsimple
      */
-    public static enum HttpMethod {
+    public enum HttpMethod {
         GET("GET"),
         POST("POST"),
         PUT("PUT"),
@@ -53,7 +53,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
         /** http request type */
         private String mHttpMethod = "";
 
-        private HttpMethod(String method) {
+        HttpMethod(String method) {
             mHttpMethod = method;
         }
 
@@ -68,7 +68,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      * 
      * @author mrsimple
      */
-    public static enum Priority {
+    public enum Priority {
         LOW,
         NORMAL,
         HIGN,
@@ -322,12 +322,12 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      * @author mrsimple
      * @param <T> 请求的response类型
      */
-    public static interface RequestListener<T> {
+    public interface RequestListener<T> {
         /**
          * 请求完成的回调
          * 
          * @param response
          */
-        public void onComplete(int stCode, T response, String errMsg);
+        void onComplete(int stCode, T response, String errMsg);
     }
 }

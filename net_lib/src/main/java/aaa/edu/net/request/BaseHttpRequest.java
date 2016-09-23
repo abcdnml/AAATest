@@ -20,6 +20,7 @@ public abstract class BaseHttpRequest<T> {
     protected int serialNum;
     protected boolean isCancel = false;
 
+
     protected String url;
     protected boolean keepCache = false;
     protected Priority priority = Priority.NORMAL;
@@ -37,7 +38,7 @@ public abstract class BaseHttpRequest<T> {
         return "application/x-www-form-urlencoded; charset=" + ENCODING_TYPE;
     }
 
-    public byte[] preparePostParams() {
+    public byte[] getByteParams() {
         if (params != null && params.size() > 0) {
             StringBuilder sb = new StringBuilder();
             for (Map.Entry<String, String> param : params.entrySet()) {
@@ -57,25 +58,6 @@ public abstract class BaseHttpRequest<T> {
         return null;
     }
 
-    public String prepareGetParams() {
-        if (params != null && params.size() > 0) {
-            StringBuilder sb = new StringBuilder();
-            for (Map.Entry<String, String> param : params.entrySet()) {
-                sb.append(param.getKey());
-                sb.append('=');
-                sb.append(param.getValue());
-                sb.append('&');
-            }
-            try {
-                String content = URLEncoder.encode(sb.toString(), ENCODING_TYPE);
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-                return null;
-            }
-        }
-        return null;
-    }
-
 
     public abstract T parseResponse(Response response);
 
@@ -86,6 +68,14 @@ public abstract class BaseHttpRequest<T> {
                 requestListener.onComplete(response.getStatusCode(), result, response.getMessage());
             }
         }
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public Map<String, String> getParams() {

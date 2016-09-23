@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.aaa.test.materialdesign.tab.BehaviorTest2Activity;
 import com.aaa.test.materialdesign.tab.BehaviorTestActivity;
+import com.tongguan.yuanjian.family.Utils.ProtocolConstant;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Toast.makeText(this,"NOTIFY_FILE_TIME : "+ProtocolConstant.NOTIFY_FILE_TIME,Toast.LENGTH_SHORT).show();
+
         initEditText();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity
                             @Override
                             public void onClick(View v) {
                                startActivity(new Intent(MainActivity.this,Main2Activity.class));
+                                //startActivity(new Intent(MainActivity.this,DevicesActivity.class));
                             }
                         }) .setActionTextColor(Color.WHITE)
                         .setCallback(new Snackbar.Callback(){
